@@ -18,7 +18,8 @@
 - Delete task `DELETE /todo/{todo_id}/tasks/{task_id}`
 - Reposition task `POST /todo/{todo_id}/tasks/{task_id}`
 
-  Params (at least one param should be provided): 
+  Params:\
+  At least one param should be provided. For inserting to the head or tail of the list omit `prev_id` or `next_id` respectively.
   - **prev_id**: ID of task before current task's new position
   - **next_id**: ID of task after current task's new position
 
