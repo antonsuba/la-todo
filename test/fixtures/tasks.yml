@@ -8,3 +8,26 @@ one:
   title: "Task 1"
   content: "Sample task"
   todo: one
+  pos_num: 1
+  pos_den: 1
+
+two:
+  title: "Task 2"
+  content: "Sample task 2"
+  todo: one
+  pos_num: 2
+  pos_den: 1
+
+three:
+  title: "Task 3"
+  content: "Sample task 3"
+  todo: one
+  pos_num: 3
+  pos_den: 1
+
+four:
+  title: "Task 4"
+  content: "Sample task 4"
+  todo: one
+  pos_num: 4
+  pos_den: 1

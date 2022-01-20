@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   before_action :load_todo
-  before_action :load_task, only: %i[show update reposition]
+  before_action :load_task, only: %i[show update reposition destroy]
 
   def create
     task = @todo.tasks.create(task_params)

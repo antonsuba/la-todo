@@ -25,7 +25,7 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update task" do
-    put todo_task_url(@todo, @task), params: { task: {  } }, as: :json
+    put todo_task_url(@todo, @task), params: { title: "Updated title" }, as: :json
     assert_response 200
   end
 
@@ -35,5 +35,13 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_response 204
+  end
+
+  test "should reposition task" do
+    post reposition_todo_task_url(@todo, @task), params: { prev_id: tasks(:three).id, next_id: tasks(:four).id }, as: :json
+    assert_response :success
+
+    body = JSON.parse(response.body)
+    assert_equal([7, 2], [body["pos_num"], body["pos_den"]])
   end
 end
